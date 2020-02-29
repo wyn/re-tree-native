@@ -1,0 +1,45 @@
+{
+  "name": "re-tree",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "dune build -p <PACKAGE_NAME>",
+    "buildDev": "pesy",
+    "release": {
+      "releasedBinaries": [
+        "ReTreeApp.exe"
+      ]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": ["re-tree.lib"],
+      "main": "TestReTree",
+      "name": "TestReTree.exe"
+    },
+    "library": {
+      "name": "re-tree.lib",
+      "namespace": "ReTree"
+    },
+    "executable": {
+      "require": ["re-tree.lib"],
+      "main": "ReTreeApp",
+      "name": "ReTreeApp.exe"
+    }
+  },
+  "scripts": {
+    "pesy": "bash -c 'env PESY_MODE=update pesy'",
+    "test": "esy x TestReTree.exe"
+  },
+  "dependencies": {
+    "@opam/dune": ">=1.6.0",
+    "@esy-ocaml/reason": "*",
+    "ocaml": "^4.4.0"
+  },
+  "devDependencies": {
+    "ocaml": "4.7.1004",
+    "refmterr": "*",
+    "pesy": "*",
+    "@opam/merlin": "*"
+  }
+}
