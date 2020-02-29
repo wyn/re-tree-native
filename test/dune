@@ -7,5 +7,5 @@
    (name TestReTree)  ;  From package.json main field
    ; The name of the executable (runnable via esy x TestReTree.exe) 
    (public_name TestReTree.exe)  ;  From package.json name field
-   (libraries  re-tree.lib ) ;  From package.json require field (array of strings)
+   (libraries  re-tree.lib qcheck ) ;  From package.json require field (array of strings)
 )

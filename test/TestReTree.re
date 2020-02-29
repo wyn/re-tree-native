@@ -1,2 +1,16 @@
-ReTree.Util.foo();
-print_endline("Add Your Test Cases Here");
+module Q = QCheck;
+module QT = QCheck.Test;
+
+let test = 
+  QT.make(
+    ~count=1000, 
+    ~name="list_rev_is_involutive", 
+    Q.(list(small_nat)), 
+    (l => List.rev(List.rev(l)) == l))
+
+QT.check_exn(test);
+
+let test2 = 
+QT.make(~count=1000, ~name="buggy_test", Q.(list(small_nat)), (l => List.rev(l) == l));
+
+QT.check_exn(test2);

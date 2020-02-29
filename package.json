@@ -1,28 +1,21 @@
 {
   "name": "re-tree",
-  "version": "0.0.0",
-  "description": "My Project",
+  "version": "0.1.0",
+  "description": "Tree structure with arbitrary parent/children",
   "esy": {
     "build": "dune build -p <PACKAGE_NAME>",
     "buildDev": "pesy",
-    "release": {
-      "releasedBinaries": [
-        "ReTreeApp.exe"
-      ]
-    }
+    "release": { "releasedBinaries": [ "ReTreeApp.exe" ] }
   },
   "buildDirs": {
     "test": {
-      "require": ["re-tree.lib"],
+      "require": [ "re-tree.lib", "qcheck" ],
       "main": "TestReTree",
       "name": "TestReTree.exe"
     },
-    "library": {
-      "name": "re-tree.lib",
-      "namespace": "ReTree"
-    },
+    "library": { "name": "re-tree.lib", "namespace": "ReTree" },
     "executable": {
-      "require": ["re-tree.lib"],
+      "require": [ "re-tree.lib" ],
       "main": "ReTreeApp",
       "name": "ReTreeApp.exe"
     }
@@ -32,14 +25,17 @@
     "test": "esy x TestReTree.exe"
   },
   "dependencies": {
-    "@opam/dune": ">=1.6.0",
     "@esy-ocaml/reason": "*",
-    "ocaml": "^4.4.0"
+    "@opam/dune": ">=1.6.0",
+    "@opam/qcheck": "0.13",
+    "ocaml": "^4.4.0",
+    "qcheck": "^0.0.3"
   },
   "devDependencies": {
     "ocaml": "4.7.1004",
     "refmterr": "*",
     "pesy": "*",
-    "@opam/merlin": "*"
+    "@opam/merlin": "*",
+    "qcheck": "^0.0.3"
   }
 }
