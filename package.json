@@ -13,7 +13,10 @@
       "main": "TestReTree",
       "name": "TestReTree.exe"
     },
-    "library": { "name": "re-tree.lib", "namespace": "ReTree" },
+    "library": {
+      "name": "re-tree.lib",
+      "namespace": "ReTree"
+    },
     "executable": {
       "require": [ "re-tree.lib" ],
       "main": "ReTreeApp",
