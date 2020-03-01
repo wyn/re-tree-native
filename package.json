@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Tree structure with arbitrary parent/children",
   "esy": {
-    "build": "dune build -p <PACKAGE_NAME>",
+    "build": "dune build -p #{self.name}",
     "buildDev": "pesy",
     "release": { "releasedBinaries": [ "ReTreeApp.exe" ] }
   },
