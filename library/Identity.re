@@ -21,6 +21,7 @@ module Make = (()) => {
   };
 
   module Map = Map.Make(OrderedId);
+  module Set = Set.Make(OrderedId);
   /* module Set = { */
   /*   type t('t) = Set.t(Id.t, Comparable.identity); */
   /*   let make = () => Set.make(~id=(module Comparable)); */
