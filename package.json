@@ -30,15 +30,14 @@
   "dependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": ">=1.6.0",
-    "@opam/qcheck": "0.13",
-    "ocaml": "^4.4.0",
-    "qcheck": "^0.0.3"
+    "ocaml": "^4.4.0"
   },
   "devDependencies": {
     "ocaml": "4.7.1004",
     "refmterr": "*",
     "pesy": "*",
     "@opam/merlin": "*",
+    "@opam/qcheck": "0.13",
     "qcheck": "^0.0.3"
   }
 }
